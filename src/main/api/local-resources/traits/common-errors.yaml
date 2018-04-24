@@ -1,0 +1,87 @@
+description: Error trait for all APIs
+responses:
+    400:
+      description: Bad Request
+      body:
+        application/json:
+          example: |
+            {
+              "errors": 
+                {
+                  "code": "ER400",
+                  "message": "Bad Request"
+                }
+              
+            }
+    401:
+      description: Unauthorized Request
+      body:
+        application/json:
+          example: |
+            {
+              "errors": 
+                {
+                  "code": "ER401",
+                  "message": "Unauthorized Request"
+                }              
+            }
+    403:
+      description: Forbidden
+      body:
+        application/json:
+          example: |
+            {
+              "errors": 
+                {
+                  "code": "ER403",
+                  "message": "Forbidden"
+                }
+            }
+    404:
+      description: Resource not Found
+      body:
+        application/json:
+          example: |
+            {
+              "errors": 
+                {
+                  "code": "ER404",
+                  "message": "Resource not found"
+                }
+            }
+    405:
+      description: Method not Allowed
+      body:
+        application/json:
+          example: |
+            {
+              "errors": 
+                {
+                  "code": "ER405",
+                  "message": "Method not Allowed"
+                }
+            }
+    406:
+      description: Not Acceptable
+      body:
+        application/json:
+          example: |
+            {
+             "errors": 
+                {
+                  "code": "ER406",
+                  "message": "Not Acceptable"
+                }
+            }
+    500:
+      description: Server Error
+      body:      
+        application/json:
+          example: |
+            {
+              "errors": 
+                {
+                  "code": "ER500",
+                  "message": "Error occurred when processing the request"
+                }
+            }

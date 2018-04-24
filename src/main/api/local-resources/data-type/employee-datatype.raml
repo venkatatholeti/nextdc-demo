@@ -1,0 +1,64 @@
+#%RAML 1.0 Library
+usage: data models for Employee
+
+types:
+
+  UserRequest:
+    type: object
+    properties:
+      fname: 
+        type: string
+        required: true
+      lname: 
+        type: string
+        required: true
+      userType:
+        enum: [Employee, Visitor, Deactivated]
+        required: false         
+      modifiedDate:
+        type: string
+        required: false  
+    example: !include  ../examples/EmployeeRequest.json        
+  
+  EmployeeDetails:    
+    type: object
+    properties: 
+      Source: string
+      Company: string
+      UserName: string
+      Email: string
+      Active: string
+      FirstName: string
+      LastName: string
+      Phone?: string
+      Mobile?: string
+      Department?: string
+      Location?: string
+      JobTitle?: string
+      Manager?: string
+  
+  ModificationDetails:    
+    type: object
+    properties: 
+      CreatedDate: string
+      LastModifiedDate: string
+  
+  User:
+    type: object
+    properties: 
+      EmployeeDetails : EmployeeDetails
+      ModificationDetails : ModificationDetails
+  
+  Status:
+    type: object
+    properties:
+      responseStatus:
+        enum: [COMPLETE, ERROR, FATAL]
+      correlationId: string
+
+  UserResponse:
+    type: object
+    properties:
+      status: Status 
+      data: User[]
+      

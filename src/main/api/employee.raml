@@ -1,0 +1,38 @@
+#%RAML 1.0
+title: Employee
+version: 1.0
+baseUri: https://mocksvc.mulesoft.com/mocks/b41c9b0f-08fd-49e2-ac32-9c213937ce51 # baseUri: https://mocksvc.mulesoft.com/mocks/858f9234-12d9-43ca-a734-fbfbc8a764d9 # baseUri: /
+securitySchemes:
+  basic:
+    description: Basic authentication for API requests
+    type: Basic Authentication
+securedBy: basic
+protocols: [HTTP, HTTPS]
+mediaType: application/json
+description: Query AD users
+documentation:
+ - title: Employee API
+   content: |
+     This api allows to retrive users from NEXTDC On-Premise AD.
+traits:
+   common-errors-trait: !include local-resources/traits/common-errors.yaml     
+uses:
+  empdt: local-resources/data-type/employee-datatype.raml
+/v1:
+ /users:
+ is:  [common-errors-trait] 
+ post:
+  description: Retrive NextDc users of type employee, external, deactivated users
+  body: 
+    application/json:
+      type: empdt.UserRequest
+  responses: 
+    200:
+      body: 
+        application/json:
+          type: empdt.UserResponse
+          example: !include local-resources/examples/Employee.json
+         
+   
+  
+
