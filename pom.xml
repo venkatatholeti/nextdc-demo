@@ -168,15 +168,15 @@
 			<version>${mule.munit.support.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-            <groupId>com.mulesoft.munit</groupId>
-            <artifactId>mule-munit-support</artifactId>
-            <version>3.8.5</version>
-        </dependency>
         <dependency>
             <groupId>com.mulesoft.munit</groupId>
             <artifactId>munit-assert</artifactId>
             <version>1.3.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mulesoft.munit</groupId>
+            <artifactId>mule-munit-support</artifactId>
+            <version>3.9.0</version>
         </dependency>
          <dependency>
             <groupId>com.mulesoft.munit</groupId>
