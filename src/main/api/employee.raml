@@ -1,7 +1,7 @@
 #%RAML 1.0
 title: Employee
 version: 1.0
-baseUri: https://mocksvc.mulesoft.com/mocks/b41c9b0f-08fd-49e2-ac32-9c213937ce51 # baseUri: https://mocksvc.mulesoft.com/mocks/858f9234-12d9-43ca-a734-fbfbc8a764d9 # baseUri: /
+baseUri: https://mocksvc.mulesoft.com/mocks/a0ce4dcc-d411-473e-97c3-ec5970ed9f73 # baseUri: https://mocksvc.mulesoft.com/mocks/ee72bf62-0d13-4643-a351-d4b6fefca8b0 # baseUri: https://mocksvc.mulesoft.com/mocks/858f9234-12d9-43ca-a734-fbfbc8a764d9 # baseUri: /
 securitySchemes:
   basic:
     description: Basic authentication for API requests
@@ -19,9 +19,8 @@ traits:
 uses:
   empdt: local-resources/data-type/employee-datatype.raml
 /v1:
- /users:
- is:  [common-errors-trait] 
  post:
+  is:  [common-errors-trait]
   description: Retrive NextDc users of type employee, external, deactivated users
   body: 
     application/json:
@@ -32,7 +31,3 @@ uses:
         application/json:
           type: empdt.UserResponse
           example: !include local-resources/examples/Employee.json
-         
-   
-  
-
