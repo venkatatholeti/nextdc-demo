@@ -51,34 +51,6 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
         </apikit:mapping>
     </apikit:mapping-exception-strategy>
     <flow name="post:/v1:application/json:employee-config">
-        <set-payload value="{
-   &quot;status&quot;:{
-      &quot;responseStatus&quot;:&quot;COMPLETE&quot;,
-      &quot;correlationId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;
-   },
-   &quot;data&quot;:[
-      {
-         &quot;EmployeeDetails&quot;:{
-            &quot;Source&quot;:&quot;AD&quot;,
-            &quot;Company&quot;:&quot;NextDC&quot;,
-            &quot;UserName&quot;:&quot;john.doe&quot;,
-            &quot;Email&quot;:&quot;john.doe@nextdc.com&quot;,
-            &quot;Active&quot;:&quot;true&quot;,
-            &quot;FirstName&quot;:&quot;John&quot;,
-            &quot;LastName&quot;:&quot;Doe&quot;,
-            &quot;Phone&quot;: &quot;0402986789&quot;,
-            &quot;Mobile&quot;: &quot;04029056789&quot;,
-            &quot;Department&quot;:&quot;IT&quot;,
-            &quot;Location&quot;:&quot;Brisbane&quot;,
-            &quot;JobTitle&quot;:&quot;Admin&quot;,
-            &quot;Manager&quot;:&quot;A Smith&quot;
-         },
-         &quot;ModificationDetails&quot;:{
-            &quot;CreatedDate&quot;:&quot;2001-12-31T12:00:00&quot;,
-            &quot;LastModifiedDate&quot;:&quot;2001-12-31T12:00:00&quot;
-         }
-      }
-   ]
-}" doc:name="Set Payload"/>
+        <set-payload value="{    &quot;status&quot;:{       &quot;responseStatus&quot;:&quot;COMPLETED&quot;,       &quot;correlationId&quot;: &quot;123e4567-e89b-12d3-a456-426655440000&quot;    },    &quot;data&quot;:[       {          &quot;EmployeeDetails&quot;:{             &quot;Source&quot;:&quot;AD&quot;,             &quot;Company&quot;:&quot;NextDC&quot;,             &quot;UserName&quot;:&quot;john.doe&quot;,             &quot;Email&quot;:&quot;john.doe@nextdc.com&quot;,             &quot;Active&quot;:&quot;true&quot;,             &quot;FirstName&quot;:&quot;John&quot;,             &quot;LastName&quot;:&quot;Doe&quot;,             &quot;Phone&quot;: &quot;0402986789&quot;,             &quot;Mobile&quot;: &quot;04029056789&quot;,             &quot;Department&quot;:&quot;IT&quot;,             &quot;Location&quot;:&quot;Brisbane&quot;,             &quot;JobTitle&quot;:&quot;Admin&quot;,             &quot;Manager&quot;:&quot;A Smith&quot;          },          &quot;ModificationDetails&quot;:{             &quot;CreatedDate&quot;:&quot;2001-12-31T12:00:00&quot;,             &quot;LastModifiedDate&quot;:&quot;2001-12-31T12:00:00&quot;          }       }    ] }" doc:name="Set Payload"/>
     </flow>
 </mule>
